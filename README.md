@@ -12,3 +12,7 @@ http://jquerymobile.com/
 http://phonegap.com/
 
 https://build.phonegap.com/
+
+---------------------------------------------------------------------------------
+
+We have some basic HTML code that runs on Android.
