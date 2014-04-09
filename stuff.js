@@ -26,5 +26,6 @@ function onError(error) {
 //document.getElementById("info3").innerHTML = 'three';
 
 function HelloWorld(){
-    alert("Hello World");
+    document.getElementById("info2").innerHTML = 'Hello World';
+    //alert("Hello World");
 }
