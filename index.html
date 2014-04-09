@@ -6,7 +6,34 @@
 
 <p>This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. </p>
 
-<p>This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test pst page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test pst page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This iSs a test page. This is a test page. This is a test page. This is a test page. ThEis is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test Cpst page. This is a test page. This is a test page. This is a test page. This isR a test page. This is a test page. This is a test page. This is a test page. ThiEs is a test page. This is a test page. This is a test page. This is a test page.T This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a te st page. This is a test page. This is a test page. This is a test page. This is Ma test page. This is a test page. This is a test page. This is a test page. This is a test pst page. This is a test page. This is a test page. This is a test paEge. This is a test page. This is a test page. This is a test page. This is a tesSt page. This is a test page. This is a test page. This is a test page. This is aS test page. This is a test page. This is a test page. This is a test page. This Ais a test page. This is a test page. This is a test page. This is a test page. TGhis is a test page. This is a test page. This is a test page. This is a test pagEe. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. This is a test page. </p>
+
+<script src="phonegap.js">
+// onSuccess Callback
+//   This method accepts a `Position` object, which contains
+//   the current GPS coordinates
+//
+var onSuccess = function(position) {
+    alert('Latitude: '          + position.coords.latitude          + '\n' +
+          'Longitude: '         + position.coords.longitude         + '\n' +
+          'Altitude: '          + position.coords.altitude          + '\n' +
+          'Accuracy: '          + position.coords.accuracy          + '\n' +
+          'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
+          'Heading: '           + position.coords.heading           + '\n' +
+          'Speed: '             + position.coords.speed             + '\n' +
+          'Timestamp: '         + position.timestamp                + '\n');
+};
+
+// onError Callback receives a PositionError object
+//
+function onError(error) {
+    alert('code: '    + error.code    + '\n' +
+          'message: ' + error.message + '\n');
+}
+
+navigator.geolocation.getCurrentPosition(onSuccess, onError);
+
+</script>
+
 <button id='but'>PRESS</button>
 
 </body>
