@@ -10,7 +10,8 @@
 <p id="info2"></p>
 <p id="info3"></p>
 
-<script src="phonegap.js">
+<script src="phonegap.js"></script>
+<script>
 // onSuccess Callback
 //   This method accepts a `Position` object, which contains
 //   the current GPS coordinates
@@ -36,8 +37,6 @@ function onError(error) {
 navigator.geolocation.getCurrentPosition(onSuccess, onError);
 
  document.getElementById("info2").innerHTML = 'two';
-</script>
-<script>
 document.getElementById("info3").innerHTML = 'three';
 </script>
 
