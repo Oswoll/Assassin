@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns   = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id          = "com.finalproject.stuy"
+        version     = "0.0.1" >
+
+    <!-- versionCode is optional and Android only -->
+
+    <name>Assagingnjkn Test</name>
+
+    <description>
+       This is a test. Doesn't do much.  
+    </description>
+
+    <author href="https://this.website.com" email="jd@gmail.com">
+        Stanly Tietel 
+    </author>
+
+    <preference name="Orientation" value="landscape" />
+
+</widget>
