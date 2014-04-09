@@ -7,6 +7,8 @@
 <p>This is a test page.</p>
 
 <p id="info"></p>
+<p id="info2"></p>
+<p id="info3"></p>
 
 <script src="phonegap.js">
 // onSuccess Callback
@@ -33,7 +35,10 @@ function onError(error) {
 
 navigator.geolocation.getCurrentPosition(onSuccess, onError);
 
-
+ document.getElementById("info2").innerHTML = 'two';
+</script>
+<script>
+document.getElementById("info3").innerHTML = 'three';
 </script>
 
 <button id='but'>PRESS</button>
