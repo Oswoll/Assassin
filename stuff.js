@@ -1,18 +1,3 @@
-<!DOCTYPE html>
-<html>
-<body>
-
-<h1>TEST PAGE - PHONE GAP</h1>
-
-<p>This is a test page.</p>
-
-<p id="info"></p>
-<p id="info2"></p>
-<p id="info3"></p>
-
-<script src="phonegap.js"></script>
-<script src="stuff.js"></script>
-<script>
 // onSuccess Callback
 //   This method accepts a `Position` object, which contains
 //   the current GPS coordinates
@@ -35,16 +20,11 @@ function onError(error) {
           'message: ' + error.message + '\n';
 }
 
-navigator.geolocation.getCurrentPosition(onSuccess, onError);
+//navigator.geolocation.getCurrentPosition(onSuccess, onError);
 
- document.getElementById("info2").innerHTML = 'two';
-document.getElementById("info3").innerHTML = 'three';
-</script>
+//document.getElementById("info2").innerHTML = 'two';
+//document.getElementById("info3").innerHTML = 'three';
 
-<button id='but'>PRESS</button>
-
-<form>
-  <input type="button" value="Click" onclick="HelloWorld()"/>
-</form>
-</body>
-</html>
+function HelloWorld(){
+    alert("Hello World");
+}
