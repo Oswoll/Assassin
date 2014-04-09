@@ -17,5 +17,6 @@
     </author>
 
     <preference name="Orientation" value="landscape" />
+    <gap:platform name="ios" />
 
 </widget>
