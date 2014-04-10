@@ -13,6 +13,8 @@ http://phonegap.com/
 
 https://build.phonegap.com/
 
+http://emulate.phonegap.com/
+
 ---------------------------------------------------------------------------------
 
 3/28/14: We have some basic HTML code that runs on Android.
