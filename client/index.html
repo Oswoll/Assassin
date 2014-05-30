@@ -6,14 +6,20 @@
 
 <body>
 
-AAA
 <h3>Login to your account here:</h3>
-		 <form method="POST">
+		 <form name="login">
 		 Username: <input type="text" name="username"> </input>
 		 Password: <input type="password" name="password"> </input>
-		 <input type="submit" name="button" value="submit"> </input>
+		 <input type="submit" name="button" onclick="enter(this.form)" value="submit"> </input>
 		 </form>
 
 
 </body>
 
+<script>
+
+var enter = function(e){
+alert("KFDSJL");
+}
+
+</script>
