@@ -19,18 +19,20 @@
 <script>
 
 var name = ""
+var target = ""
 
 $('form').submit(function(){
+
+
+	info = $(this).serialize();
 	
     	var user = $(this).serializeArray()[0].value;
-
-	var info = $(this).serialize();
 
 
 	$.ajax({
 		type: 'POST',
-		data: info,
 		url: 'http://nick-add-this.com',
+		data: info,
 		success: function(data){
 			if (data == "yes"){
 				name = user;
@@ -42,11 +44,19 @@ $('form').submit(function(){
 		},
 		error: function(){
 			alert('error - probably server hasnt been made yet');
+			
 		}
 	});
 	
 	return false;
 });
 
+
+var get_target = function(){
+	$.post( "http://nick-add-this.com", { name: name, request: "get_target"} )
+	.done(function(data){
+		target = data;	
+	});
+}
 
 </script>
