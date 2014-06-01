@@ -19,18 +19,20 @@
 <script>
 
 var name = ""
+var target = ""
 
 $('form').submit(function(){
+
+
+	info = $(this).serialize();
 	
     	var user = $(this).serializeArray()[0].value;
-
-	var info = $(this).serialize();
 
 
 	$.ajax({
 		type: 'POST',
-		data: info,
 		url: 'http://nick-add-this.com',
+		data: info,
 		success: function(data){
 			if (data == "yes"){
 				name = user;
@@ -42,11 +44,52 @@ $('form').submit(function(){
 		},
 		error: function(){
 			alert('error - probably server hasnt been made yet');
+			
 		}
 	});
 	
 	return false;
 });
 
+var register = function(username,password){
+
+	var info = {request:"register", username:username, password:password};
+
+	$.ajax({
+		type: 'POST',
+		url: 'http://nick-add-this.com',
+		data: info,
+		success: function(data){
+			if (data == "yes"){
+				alert("registration sucessful");
+			}
+			if (data == "no"){
+				alert("registration failed");
+			}
+		},
+		error: function(){
+			alert('error - probably server hasnt been made yet');
+			
+		}
+	});
+}
+
+var get_target = function(){
+
+	var info = {request:"get_target", name:name};
+
+	$.ajax({
+		type: 'POST',
+		url: 'http://nick-add-this.com',
+		data: info,
+		success: function(data){
+			target = data;
+		},
+		error: function(){
+			alert('error - probably server hasnt been made yet');
+			
+		}
+	});
+}
 
 </script>
