@@ -18,19 +18,30 @@
 <script src="jquery-1.11.1.min.js"></script>	
 <script>
 
+var name = ""
+
 $('form').submit(function(){
+	
+    	var user = $(this).serializeArray()[0].value;
 
 	var info = $(this).serialize();
-	
+
+
 	$.ajax({
 		type: 'POST',
 		data: info,
 		url: 'http://nick-add-this.com',
 		success: function(data){
-			alert('aaa');
+			if (data == "yes"){
+				name = user;
+				alert('you are logged in');
+			}
+			if (data == "no"){
+				alert('you are not logged in');
+			}
 		},
 		error: function(){
-			alert('There was an error adding your comment');
+			alert('error - probably server hasnt been made yet');
 		}
 	});
 	
