@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<script  src="phonegap.js"></script>
+<h2>ASSASSIN</h2>
+<h4>(MOBILE)</h4>
+
+<body>
+
+<h3>Login to your account here:</h3>
+		 <form name="login">
+		 Username: <input type="text" id="username" name="username"> </input>
+		 Password: <input type="password" id = "password" name="password"> </input>
+		 <input type="submit" name="button" value="submit"> </input>
+		 </form>
+
+
+</body>
+<script src="jquery-1.11.1.min.js"></script>	
+<script>
+
+var name = ""
+
+$('form').submit(function(){
+	
+    	var user = $(this).serializeArray()[0].value;
+
+	var info = $(this).serialize();
+
+
+	$.ajax({
+		type: 'POST',
+		data: info,
+		url: 'http://nick-add-this.com',
+		success: function(data){
+			if (data == "yes"){
+				name = user;
+				alert('you are logged in');
+			}
+			if (data == "no"){
+				alert('you are not logged in');
+			}
+		},
+		error: function(){
+			alert('error - probably server hasnt been made yet');
+		}
+	});
+	
+	return false;
+});
+
+
+</script>
