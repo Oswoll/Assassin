@@ -51,11 +51,44 @@ $('form').submit(function(){
 	return false;
 });
 
+var register = function(username,password){
+
+	var info = {request:"register", username:username, password:password};
+
+	$.ajax({
+		type: 'POST',
+		url: 'http://nick-add-this.com',
+		data: info,
+		success: function(data){
+			if (data == "yes"){
+				alert("registration sucessful");
+			}
+			if (data == "no"){
+				alert("registration failed");
+			}
+		},
+		error: function(){
+			alert('error - probably server hasnt been made yet');
+			
+		}
+	});
+}
 
 var get_target = function(){
-	$.post( "http://nick-add-this.com", { name: name, request: "get_target"} )
-	.done(function(data){
-		target = data;	
+
+	var info = {request:"get_target", name:name};
+
+	$.ajax({
+		type: 'POST',
+		url: 'http://nick-add-this.com',
+		data: info,
+		success: function(data){
+			target = data;
+		},
+		error: function(){
+			alert('error - probably server hasnt been made yet');
+			
+		}
 	});
 }
 
