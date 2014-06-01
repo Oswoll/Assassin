@@ -8,9 +8,9 @@
 
 <h3>Login to your account here:</h3>
 		 <form name="login">
-		 Username: <input type="text" name="username"> </input>
-		 Password: <input type="password" name="password"> </input>
-		 <input type="submit" name="button" onclick="enter(this.form)" value="submit"> </input>
+		 Username: <input type="text" id="username" name="username"> </input>
+		 Password: <input type="password" id = "password" name="password"> </input>
+		 <input type="submit" name="button" value="submit"> </input>
 		 </form>
 
 
@@ -18,15 +18,24 @@
 <script src="jquery.js"></script>	
 <script>
 
-var enter = function(form){
-	if(form.username.value == "joe" && form.password.value == "1234"){
-		alert("you have a dumb password");	
-	}
+$('form').submit(function(){
 
-}
+	var info = $(this).serialize();
+	
+	$.ajax({
+		type: 'POST',
+		data: info,
+		url: 'http://nick-add-this.com',
+		success: function(data){
+			alert('aaa');
+		},
+		error: function(){
+			alert('There was an error adding your comment');
+		}
+	});
+	
+	return false;
+});
 
-window.onload = function() {
-alert( "welcome" );
-}
 
 </script>
