@@ -24,7 +24,7 @@ var target = ""
 $('form').submit(function(){
 
 
-	info = $(this).serialize();
+	info = "request=login&"+$(this).serialize();
 	
     	var user = $(this).serializeArray()[0].value;
 
