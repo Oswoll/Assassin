@@ -76,6 +76,10 @@ var register = function(username,password){
 
 var get_target = function(){
 
+
+
+
+
 	var info = {request:"get_target", name:name};
 
 	$.ajax({
@@ -91,5 +95,44 @@ var get_target = function(){
 		}
 	});
 }
+
+var kill = function(){
+
+	var latitude;
+	var longitude;
+	var altitude;
+
+	var GPSonSuccess = function(position) {
+		longitude = position.coords.longitude;
+		latitude = position.coords.latitude;
+		altitude = position.coords.altitude;
+   		
+	}
+
+
+	function GPSonError(error) {
+    		alert('code: '    + error.code    + '\n' +
+          	'message: ' + error.message + '\n');
+	}	
+
+	navigator.geolocation.getCurrentPosition(GPSonSuccess, GPSonError);
+
+
+	var info = {request:"kill", latitude:latitude, longitude:longitude, altitude:altitude};
+	alert(info.latitude);
+	$.ajax({
+		type: 'GET',
+		url: 'http://nick-add-this.com',
+		data: info,
+		success: function(data){
+			alert(data);
+		},
+		error: function(){
+			alert('error - probably server hasnt been made yet');
+			
+		}
+	});
+}
+
 
 </script>
