@@ -119,9 +119,9 @@ var kill = function(){
 
 
 	var info = {request:"kill", latitude:latitude, longitude:longitude, altitude:altitude};
-	alert(info.latitude);
+
 	$.ajax({
-		type: 'GET',
+		type: 'POST',
 		url: 'http://nick-add-this.com',
 		data: info,
 		success: function(data){
