@@ -7,6 +7,11 @@ $("#register").submit(function(){
 })
 
 
+$("#kill").submit(function(){
+	kill();
+	return false;
+})
+
 var login = function(){
 
 
