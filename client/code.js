@@ -46,7 +46,7 @@ var check_register = function(id){
 		},
 		error: function(){
 			alert('error - probably server hasnt been made yet');
-			
+			window.location="register.html";
 		}
 	});
 
