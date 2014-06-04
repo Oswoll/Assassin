@@ -31,7 +31,10 @@ $('form').submit(function(){
 });
 
 
-var check_register = function(id){
+var check_register = function(){
+
+	id = 123;
+	//id = device.uuid;
 
 	var info = {request:"check_register", id:id};
 
