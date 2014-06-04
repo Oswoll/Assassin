@@ -1,4 +1,4 @@
-var name = ""
+
 var target = ""
 
 $('form').submit(function(){
@@ -15,11 +15,10 @@ $('form').submit(function(){
 		data: info,
 		success: function(data){
 			if (data == "yes"){
-				name = user;
-				alert('you are logged in');
+				alert("successfully logged in");
 			}
 			if (data == "no"){
-				alert('you are not logged in');
+				window.location="login.html";	
 			}
 		},
 		error: function(){
@@ -31,9 +30,29 @@ $('form').submit(function(){
 	return false;
 });
 
-var register = function(username,password, name){
 
-	var info = {request:"register", username:username, password:password, name:name};
+var check_register = function(id){
+
+	var info = {request:"check_register", id:id};
+
+	$.ajax({
+		type: 'POST',
+		url: 'http://nick-add-this.com',
+		data: info,
+		success: function(data){
+			
+		},
+		error: function(){
+			alert('error - probably server hasnt been made yet');
+			
+		}
+	});
+
+}
+
+var register = function(username,id, name){
+
+	var info = {request:"register", id:id, name:name};
 
 	$.ajax({
 		type: 'POST',
