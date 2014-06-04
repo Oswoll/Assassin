@@ -40,7 +40,9 @@ var check_register = function(id){
 		url: 'http://nick-add-this.com',
 		data: info,
 		success: function(data){
-			
+			if (data = "no"){
+				window.location="register.html";
+			}			
 		},
 		error: function(){
 			alert('error - probably server hasnt been made yet');
