@@ -75,6 +75,7 @@ var register = function(name){
 		success: function(data){
 			if (data == "yes"){
 				alert("registration sucessful");
+				window.location="index.html";
 			}
 			if (data == "no"){
 				alert("registration failed");
@@ -82,6 +83,7 @@ var register = function(name){
 		},
 		error: function(){
 			alert('error - probably server hasnt been made yet');
+			window.location="index.html";
 			
 		}
 	});
