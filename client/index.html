@@ -51,9 +51,9 @@ $('form').submit(function(){
 	return false;
 });
 
-var register = function(username,password){
+var register = function(username,password, name){
 
-	var info = {request:"register", username:username, password:password};
+	var info = {request:"register", username:username, password:password, name:name};
 
 	$.ajax({
 		type: 'POST',
