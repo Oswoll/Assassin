@@ -1,7 +1,13 @@
 
 var target = ""
 
-$('form').submit(function(){
+$("#register").submit(function(){
+	register( $( "input:first" ).val());
+	return false;
+})
+
+
+var login = function(){
 
 
 	info = "request=login&"+$(this).serialize();
@@ -27,8 +33,7 @@ $('form').submit(function(){
 		}
 	});
 	
-	return false;
-});
+}
 
 
 var check_register = function(){
@@ -55,7 +60,11 @@ var check_register = function(){
 
 }
 
-var register = function(username,id, name){
+var register = function(name){
+
+	id = 123;
+	//id = device.uuid;
+
 
 	var info = {request:"register", id:id, name:name};
 
@@ -79,8 +88,6 @@ var register = function(username,id, name){
 }
 
 var get_target = function(){
-
-
 
 
 
