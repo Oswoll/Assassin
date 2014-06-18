@@ -1,48 +1,25 @@
 <!DOCTYPE html>
 <html>
-<body>
-
-<h1>TEST PAGE - PHONE GAP</h1>
-
-<p>This is a test page.</p>
-
-<p id="info"></p>
-<p id="info2"></p>
-<p id="info3"></p>
-
+<head>
+<link rel="stylesheet" href="onsen-css-components.css"/>
 <script src="phonegap.js"></script>
-<script src="stuff.js"></script>
-<script>
-// onSuccess Callback
-//   This method accepts a `Position` object, which contains
-//   the current GPS coordinates
-//
-var onSuccess = function(position) {
-    document.getElementById("info").innerHTML = 'Latitude: '          + position.coords.latitude          + '\n' +
-          'Longitude: '         + position.coords.longitude         + '\n' +
-          'Altitude: '          + position.coords.altitude          + '\n' +
-          'Accuracy: '          + position.coords.accuracy          + '\n' +
-          'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
-          'Heading: '           + position.coords.heading           + '\n' +
-          'Speed: '             + position.coords.speed             + '\n' +
-          'Timestamp: '         + position.timestamp                + '\n';
-};
+<script src="jquery-1.11.1.min.js"></script>	
+<script src="code.js"></script>
+</head>
+<body class="page" onload="check_register();">
+<div class = "navigation-bar">
+		<div class="navigation-bar__item left quarter float-left"></div>
+      		<div class="navigation-bar__item full float-left text-centering">
+		<span class="navigation-bar__title navigation-bar__line-height float-left">ASSASSIN</span>
+      		</div>
+		<div class="navigation-bar__item right quarter float-left">
+      		<span class="icon-button--quiet navigation-bar__line-height font-weight-500"></span>
+     		</div>
+	</div>
 
-// onError Callback receives a PositionError object
-//
-function onError(error) {
-    document.getElementById("info").innerHTML = 'code: '    + error.code    + '\n' +
-          'message: ' + error.message + '\n';
-}
-
-navigator.geolocation.getCurrentPosition(onSuccess, onError);
-
-document.getElementById("info2").innerHTML = 'two';
-document.getElementById("info3").innerHTML = 'three';
-</script>
-
-<form>
-  <input type="button" value="Click" onclick="HelloWorld()"/>
+<form id = 'kill' name="kill">
+<input type="submit" name="button" class="button" value="KILL"> </input>
 </form>
+
+
 </body>
-</html>
