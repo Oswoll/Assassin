@@ -43,8 +43,8 @@ var login = function(){
 
 var check_register = function(){
 
-	id = 123;
-	//id = device.uuid;
+	
+	id = device.uuid;
 
 	var info = {request:"check_register", id:id};
 
