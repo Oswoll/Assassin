@@ -22,7 +22,7 @@ var login = function(){
 
 	$.ajax({
 		type: 'POST',
-		url: 'db4free.net',
+		url: 'http://db4free.net/3306/',
 		data: info,
 		success: function(data){
 			if (data == "yes"){
@@ -50,7 +50,7 @@ var check_register = function(){
 
 	$.ajax({
 		type: 'POST',
-		url: 'db4free.net',
+		url: 'http://db4free.net/3306/',
 		data: info,
 		success: function(data){
 			if (data = "no"){
@@ -67,15 +67,15 @@ var check_register = function(){
 
 var register = function(name){
 
-	id = 123;
-	//id = device.uuid;
+	
+	id = device.uuid;
 
 
 	var info = {request:"register", id:id, name:name};
 
 	$.ajax({
 		type: 'POST',
-		url: 'db4free.net',
+		url: 'http://db4free.net/3306/',
 		data: info,
 		success: function(data){
 			if (data == "yes"){
@@ -102,7 +102,7 @@ var get_target = function(){
 
 	$.ajax({
 		type: 'POST',
-		url: 'db4free.net',
+		url: 'http://db4free.net/3306/',
 		data: info,
 		success: function(data){
 			target = data;
@@ -140,7 +140,7 @@ var kill = function(){
 
 	$.ajax({
 		type: 'POST',
-		url: 'db4free.net',
+		url: 'http://db4free.net/3306/',
 		data: info,
 		success: function(data){
 			alert(data);
