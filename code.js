@@ -22,7 +22,7 @@ var login = function(){
 
 	$.ajax({
 		type: 'POST',
-		url: 'http://nick-add-this.com',
+		url: 'db4free.net',
 		data: info,
 		success: function(data){
 			if (data == "yes"){
@@ -50,7 +50,7 @@ var check_register = function(){
 
 	$.ajax({
 		type: 'POST',
-		url: 'http://nick-add-this.com',
+		url: 'db4free.net',
 		data: info,
 		success: function(data){
 			if (data = "no"){
@@ -75,7 +75,7 @@ var register = function(name){
 
 	$.ajax({
 		type: 'POST',
-		url: 'http://nick-add-this.com',
+		url: 'db4free.net',
 		data: info,
 		success: function(data){
 			if (data == "yes"){
@@ -102,7 +102,7 @@ var get_target = function(){
 
 	$.ajax({
 		type: 'POST',
-		url: 'http://nick-add-this.com',
+		url: 'db4free.net',
 		data: info,
 		success: function(data){
 			target = data;
@@ -140,7 +140,7 @@ var kill = function(){
 
 	$.ajax({
 		type: 'POST',
-		url: 'http://nick-add-this.com',
+		url: 'db4free.net',
 		data: info,
 		success: function(data){
 			alert(data);
