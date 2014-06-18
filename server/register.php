@@ -6,23 +6,24 @@ $database = "assassin";
 
 $con = mysqli_connect($db_server, $db_user, $db_pass);
    
-//$sql = "CREATE TABLE IF NOT EXISTS 'users' (
-//       'username' text,
-//       'password' text,
-//       'name' text,
-//       PRIMARY KEY (username)
-//       )";
+mysqli_select_db($con, $database);
 
-//mysqli_query($sql);
+$sql = "CREATE TABLE IF NOT EXISTS 'users' (
+       'name' text,
+       'uuid' int,
+       PRIMARY KEY (name)
+       )";
+
+mysqli_query($con, $sql);
 
    
 //$name = $_POST["username"];
 //$pw = $_POST["password"];
 //$realname = $_POST["name"];
 
-//$sql = "INSERT INTO users (username, password, name)
-//       VALUES ($name, $pw, $realname)";
-//mysql_query($sql);
+$sql = "INSERT INTO users (name, uuid)
+       VALUES ('nick', '111')";
+mysqli_query($con, $sql);
 
 mysqli_close($con);
 ?>		
